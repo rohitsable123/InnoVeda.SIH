@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FutureToFarm - Get Started</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <style>
+    .progress-step { width: 2rem; height: 2rem; }
+    .progress-step.active { background-color: #4CAF50; color: white; }
+    .progress-step.completed { background-color: #8BC34A; color: white; }
+    .badge-animation { animation: pulse 2s infinite; }
+    @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+  </style>
+</head>
+<body class="bg-green-50 font-sans">
+  <div class="min-h-screen flex flex-col">
+
+    <!-- Progress Bar -->
+    <div class="bg-white shadow-sm">
+      <div class="max-w-4xl mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+          <div class="flex space-x-2">
+            <div class="progress-step rounded-full border-2 border-green-500 flex items-center justify-center font-bold active">1</div>
+            <div class="progress-step rounded-full border-2 border-green-200 flex items-center justify-center font-bold">2</div>
+            <div class="progress-step rounded-full border-2 border-green-200 flex items-center justify-center font-bold">3</div>
+            <div class="progress-step rounded-full border-2 border-green-200 flex items-center justify-center font-bold">4</div>
+            <div class="progress-step rounded-full border-2 border-green-200 flex items-center justify-center font-bold">5</div>
+            <div class="progress-step rounded-full border-2 border-green-200 flex items-center justify-center font-bold">6</div>
+          </div>
+          <div class="text-sm text-green-700" id="step-counter">Step 1 of 6</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow">
+
+      <!-- Step 1: Language Selection -->
+      <section id="step1" class="max-w-4xl mx-auto px-4 py-8">
+        <div class="bg-white rounded-xl shadow-md p-6 md:p-8" data-aos="fade-up">
+          <div class="flex items-center mb-6">
+            <div class="bg-green-100 p-3 rounded-full mr-4"><i data-feather="globe" class="text-green-600"></i></div>
+            <h2 class="text-2xl font-bold text-gray-800" id="lang-title">Language Selection</h2>
+          </div>
+
+          <p class="text-gray-600 mb-6" id="lang-desc">Please select your preferred language for the onboarding process.</p>
+
+          <div class="mb-6">
+            <label for="language" class="block text-gray-700 font-medium mb-2" id="lang-label">Select Language</label>
+            <select id="language" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500">
+              <option value="en" selected>English</option>
+              <option value="hi">Hindi</option>
+              <option value="mr">Marathi</option>
+              <option value="ta">Tamil</option>
+              <option value="te">Telugu</option>
+              <option value="kn">Kannada</option>
+              <option value="ml">Malayalam</option>
+              <option value="bn">Bengali</option>
+              <option value="pa">Punjabi</option>
+              <option value="gu">Gujarati</option>
+              <option value="or">Odia</option>
+            </select>
+          </div>
+
+          <div class="flex justify-end">
+            <button id="btn-next-1-el" class="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg transition duration-200 flex items-center">
+              <span id="btn-next-1">Next</span>
+              <i data-feather="arrow-right" class="ml-2"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 2: Farming Practices -->
+      <section id="step2" class="max-w-4xl mx-auto px-4 py-8 hidden">
+        <div class="bg-white rounded-xl shadow-md p-6 md:p-8" data-aos="fade-up">
+          <div class="flex items-center mb-6">
+            <div class="bg-green-100 p-3 rounded-full mr-4"><i data-feather="activity" class="text-green-600"></i></div>
+            <h2 class="text-2xl font-bold text-gray-800" id="practice-title">Farming Practices</h2>
+          </div>
+
+          <p class="text-gray-600 mb-6" id="practice-desc">Which farming practices do you use?</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-green-50">
+              <input type="checkbox" name="practices" value="organic" class="h-5 w-5 text-green-600 rounded" />
+              <span class="ml-3 text-gray-700" id="practice1">🌿 Organic</span>
+            </label>
+
+            <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-green-50">
+              <input type="checkbox" name="practices" value="chemical" class="h-5 w-5 text-green-600 rounded" />
+              <span class="ml-3 text-gray-700" id="practice2">🧪 Chemical-based</span>
+            </label>
+
+            <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-green-50">
+              <input type="checkbox" name="practices" value="mixed" class="h-5 w-5 text-green-600 rounded" />
+              <span class="ml-3 text-gray-700" id="practice3">🌾 Mixed Cropping</span>
+            </label>
+
+            <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-green-50">
+              <input type="checkbox" name="practices" value="traditional" class="h-5 w-5 text-green-600 rounded" />
+              <span class="ml-3 text-gray-700" id="practice4">👩‍🌾 Traditional</span>
+            </label>
+          </div>
+
+          <div class="flex justify-between">
+            <button id="btn-back-2-el" class="text-gray-600 hover:text-gray-800 font-medium py-3 px-6 rounded-lg transition duration-200 flex items-center">
+              <i data-feather="arrow-left" class="mr-2"></i>
+              <span id="btn-back-2">Back</span>
+            </button>
+
+            <button id="btn-next-2-el" class="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg transition duration-200 flex items-center">
+              <span id="btn-next-2">Next</span>
+              <i data-feather="arrow-right" class="ml-2"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 3: Crop Info -->
+      <section id="step3" class="max-w-4xl mx-auto px-4 py-8 hidden">
+        <div class="bg-white rounded-xl shadow-md p-6 md:p-8" data-aos="fade-up">
+          <div class="flex items-center mb-6">
+            <div class="bg-green-100 p-3 rounded-full mr-4"><i data-feather="package" class="text-green-600"></i></div>
+            <h2 class="text-2xl font-bold text-gray-800" id="crop-title">Crop Information</h2>
+          </div>
+
+          <div class="mb-6">
+            <label for="current-crop" class="block text-gray-700 font-medium mb-2" id="current-crop-label">Which crop are you currently applying or want to apply?</label>
+            <input type="text" id="current-crop" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500" placeholder="e.g. Wheat, Rice, Cotton" />
+          </div>
+
+          <div class="mb-6">
+            <label for="previous-crop" class="block text-gray-700 font-medium mb-2" id="previous-crop-label">If you want to apply a new crop, which crop did you apply before?</label>
+            <input type="text" id="previous-crop" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500" placeholder="e.g. Corn, Soybean" />
+          </div>
+
+          <div class="flex justify-between">
+            <button id="btn-back-3-el" class="text-gray-600 hover:text-gray-800 font-medium py-3 px-6 rounded-lg transition duration-200 flex items-center">
+              <i data-feather="arrow-left" class="mr-2"></i>
+              <span id="btn-back-3">Back</span>
+            </button>
+            <button id="btn-next-3-el" class="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg transition duration-200 flex items-center">
+              <span id="btn-next-3">Next</span>
+              <i data-feather="arrow-right" class="ml-2"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 4: Soil Information -->
+      <section id="step4" class="max-w-4xl mx-auto px-4 py-8 hidden">
+        <div class="bg-white rounded-xl shadow-md p-6 md:p-8" data-aos="fade-up">
+          <div class="flex items-center mb-6">
+            <div class="bg-green-100 p-3 rounded-full mr-4"><i data-feather="layers" class="text-green-600"></i></div>
+            <h2 class="text-2xl font-bold text-gray-800" id="soil-title">Soil Information</h2>
+          </div>
+
+          <p class="text-gray-600 mb-6" id="soil-desc">Tell us about your soil.</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-green-50">
+              <input type="radio" name="soil" value="sandy" class="h-5 w-5 text-green-600" />
+              <span class="ml-3 text-gray-700" id="soil1">Sandy loam</span>
+            </label>
+
+            <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-green-50">
+              <input type="radio" name="soil" value="clayey" class="h-5 w-5 text-green-600" />
+              <span class="ml-3 text-gray-700" id="soil2">Clayey</span>
+            </label>
+
+            <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-green-50">
+              <input type="radio" name="soil" value="black" class="h-5 w-5 text-green-600" />
+              <span class="ml-3 text-gray-700" id="soil3">Black soil</span>
+            </label>
+
+            <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-green-50">
+              <input type="radio" name="soil" value="alluvial" class="h-5 w-5 text-green-600" />
+              <span class="ml-3 text-gray-700" id="soil4">Alluvial</span>
+            </label>
+          </div>
+
+          <div class="mb-6">
+            <label class="block text-gray-700 font-medium mb-2" id="upload-label">Upload photo of your soil (optional)</label>
+            <div class="flex items-center justify-center w-full">
+              <label class="flex flex-col w-full h-32 border-2 border-dashed border-gray-300 hover:border-green-500 rounded-lg cursor-pointer bg-gray-50 hover:bg-green-50">
+                <div class="flex flex-col items-center justify-center pt-7">
+                  <i data-feather="upload" class="text-gray-500"></i>
+                  <p class="pt-1 text-sm text-gray-600" id="upload-desc">Click to upload soil photo</p>
+                </div>
+                <input id="soil-photo" type="file" class="opacity-0" />
+              </label>
+            </div>
+          </div>
+
+          <div class="mb-6">
+            <label for="soil-description" class="block text-gray-700 font-medium mb-2" id="soil-desc-label">Or describe your soil (optional)</label>
+            <textarea id="soil-description" rows="3" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500" placeholder="Describe your soil characteristics..."></textarea>
+          </div>
+
+          <div class="flex justify-between">
+            <button id="btn-back-4-el" class="text-gray-600 hover:text-gray-800 font-medium py-3 px-6 rounded-lg transition duration-200 flex items-center">
+              <i data-feather="arrow-left" class="mr-2"></i>
+              <span id="btn-back-4">Back</span>
+            </button>
+            <button id="btn-next-4-el" class="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg transition duration-200 flex items-center">
+              <span id="btn-next-4">Next</span>
+              <i data-feather="arrow-right" class="ml-2"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 5: Weather Information -->
+      <section id="step5" class="max-w-4xl mx-auto px-4 py-8 hidden">
+        <div class="bg-white rounded-xl shadow-md p-6 md:p-8" data-aos="fade-up">
+          <div class="flex items-center mb-6">
+            <div class="bg-green-100 p-3 rounded-full mr-4"><i data-feather="cloud" class="text-green-600"></i></div>
+            <h2 class="text-2xl font-bold text-gray-800" id="weather-title">Weather Information</h2>
+          </div>
+
+          <p class="text-gray-600 mb-6" id="weather-desc">What is the usual weather in your region?</p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+            <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-green-50">
+              <input type="radio" name="weather" value="hot" class="h-5 w-5 text-green-600" />
+              <span class="ml-3 text-gray-700" id="weather1">☀️ Hot & Dry</span>
+            </label>
+
+            <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-green-50">
+              <input type="radio" name="weather" value="humid" class="h-5 w-5 text-green-600" />
+              <span class="ml-3 text-gray-700" id="weather2">💧 Humid</span>
+            </label>
+
+            <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-green-50">
+              <input type="radio" name="weather" value="rainy" class="h-5 w-5 text-green-600" />
+              <span class="ml-3 text-gray-700" id="weather3">🌧️ Rainy</span>
+            </label>
+
+            <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-green-50">
+              <input type="radio" name="weather" value="moderate" class="h-5 w-5 text-green-600" />
+              <span class="ml-3 text-gray-700" id="weather4">🌤️ Moderate</span>
+            </label>
+
+            <label class="flex items-center p-4 border border-gray-200 rounded-lg cursor-pointer hover:bg-green-50">
+              <input type="radio" name="weather" value="cold" class="h-5 w-5 text-green-600" />
+              <span class="ml-3 text-gray-700" id="weather5">❄️ Cold</span>
+            </label>
+          </div>
+
+          <div class="flex justify-between">
+            <button id="btn-back-5-el" class="text-gray-600 hover:text-gray-800 font-medium py-3 px-6 rounded-lg transition duration-200 flex items-center">
+              <i data-feather="arrow-left" class="mr-2"></i>
+              <span id="btn-back-5">Back</span>
+            </button>
+            <button id="btn-next-5-el" class="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg transition duration-200 flex items-center">
+              <span id="btn-next-5">Next</span>
+              <i data-feather="arrow-right" class="ml-2"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Step 6: Applied Crops -->
+      <section id="step6" class="max-w-4xl mx-auto px-4 py-8 hidden">
+        <div class="bg-white rounded-xl shadow-md p-6 md:p-8" data-aos="fade-up">
+          <div class="flex items-center mb-6">
+            <div class="bg-green-100 p-3 rounded-full mr-4"><i data-feather="check-circle" class="text-green-600"></i></div>
+            <h2 class="text-2xl font-bold text-gray-800" id="applied-title">Applied Crops</h2>
+          </div>
+
+          <div class="mb-6">
+            <p class="text-gray-600 mb-4" id="applied-desc">Have you already applied any crop recently?</p>
+            <div class="flex space-x-4 mb-6">
+              <label class="flex items-center">
+                <input type="radio" name="applied" value="yes" class="h-5 w-5 text-green-600" onchange="toggleAppliedCrop(true)" />
+                <span class="ml-2 text-gray-700" id="applied-yes">Yes</span>
+              </label>
+
+              <label class="flex items-center">
+                <input type="radio" name="applied" value="no" class="h-5 w-5 text-green-600" onchange="toggleAppliedCrop(false)" checked />
+                <span class="ml-2 text-gray-700" id="applied-no">No</span>
+              </label>
+            </div>
+
+            <div id="applied-crop-container" class="hidden">
+              <label for="applied-crop" class="block text-gray-700 font-medium mb-2" id="applied-crop-label">Which crop did you apply?</label>
+              <input type="text" id="applied-crop" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:border-green-500" placeholder="e.g. Wheat, Rice, Cotton" />
+            </div>
+          </div>
+
+          <div class="flex justify-between">
+            <button id="btn-back-6-el" class="text-gray-600 hover:text-gray-800 font-medium py-3 px-6 rounded-lg transition duration-200 flex items-center">
+              <i data-feather="arrow-left" class="mr-2"></i>
+              <span id="btn-back-6">Back</span>
+            </button>
+            <button id="btn-complete-el" class="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-6 rounded-lg transition duration-200 flex items-center">
+              <span id="btn-complete">Complete</span>
+              <i data-feather="check" class="ml-2"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Summary Section -->
+      <section id="summary" class="max-w-4xl mx-auto px-4 py-8 hidden">
+        <div class="bg-white rounded-xl shadow-md p-6 md:p-8" data-aos="fade-up">
+          <div class="text-center mb-8">
+            <div class="inline-block bg-green-100 p-6 rounded-full mb-4"><i data-feather="award" class="text-green-600 w-12 h-12 badge-animation"></i></div>
+            <h2 class="text-3xl font-bold text-gray-800 mb-2" id="congrats-title">Congratulations!</h2>
+            <p class="text-gray-600" id="congrats-desc">You've completed the FutureToFarm onboarding process</p>
+          </div>
+
+          <div class="bg-green-50 rounded-lg p-6 mb-8">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4 flex items-center"><i data-feather="clipboard" class="mr-2"></i> <span id="profile-title">Your Farming Profile</span></h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="bg-white p-4 rounded-lg"><h4 class="font-medium text-gray-700 mb-2">Language</h4><p id="summary-language" class="text-gray-600">English</p></div>
+              <div class="bg-white p-4 rounded-lg"><h4 class="font-medium text-gray-700 mb-2">Farming Practices</h4><p id="summary-practices" class="text-gray-600">Organic, Mixed Cropping</p></div>
+              <div class="bg-white p-4 rounded-lg"><h4 class="font-medium text-gray-700 mb-2">Current Crop</h4><p id="summary-current-crop" class="text-gray-600">Wheat</p></div>
+              <div class="bg-white p-4 rounded-lg"><h4 class="font-medium text-gray-700 mb-2">Previous Crop</h4><p id="summary-previous-crop" class="text-gray-600">Corn</p></div>
+              <div class="bg-white p-4 rounded-lg"><h4 class="font-medium text-gray-700 mb-2">Soil Type</h4><p id="summary-soil" class="text-gray-600">Sandy loam</p></div>
+              <div class="bg-white p-4 rounded-lg"><h4 class="font-medium text-gray-700 mb-2">Weather</h4><p id="summary-weather" class="text-gray-600">Moderate</p></div>
+              <div class="bg-white p-4 rounded-lg"><h4 class="font-medium text-gray-700 mb-2">Applied Crops</h4><p id="summary-applied" class="text-gray-600">None</p></div>
+            </div>
+          </div>
+
+          <div class="text-center bg-yellow-50 rounded-lg p-6 mb-8">
+            <div class="inline-block bg-yellow-100 p-4 rounded-full mb-4"><i data-feather="award" class="text-yellow-600 w-8 h-8"></i></div>
+            <h3 class="text-2xl font-bold text-gray-800 mb-2" id="badge-text">🏆 Farm Explorer Badge earned!</h3>
+            <p class="text-gray-600" id="badge-desc">You've taken the first step towards smarter farming. Keep exploring!</p>
+          </div>
+
+          <div class="flex justify-center">
+            <button id="btn-dashboard-el" class="bg-green-600 hover:bg-green-700 text-white font-medium py-3 px-8 rounded-lg transition duration-200 flex items-center">
+              <span id="btn-dashboard">Go to Dashboard</span>
+              <i data-feather="arrow-right" class="ml-2"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-6">
+      <div class="max-w-4xl mx-auto px-4 text-center text-gray-500 text-sm"><p>© 2025 FutureToFarm. All rights reserved.</p></div>
+    </footer>
+  </div>
+
+  <script>
+    // Translations for core UI strings. For languages not present, fallback to English.
+    const translations = {
+      en: { langTitle: "Language Selection", langDesc: "Please select your preferred language for the onboarding process.", langLabel: "Select Language", btnNext: "Next", btnBack: "Back", btnComplete: "Complete", practiceTitle: "Farming Practices", practiceDesc: "Which farming practices do you use?", practice1: "🌿 Organic", practice2: "🧪 Chemical-based", practice3: "🌾 Mixed Cropping", practice4: "👩‍🌾 Traditional", cropTitle: "Crop Information", currentCropLabel: "Which crop are you currently applying or want to apply?", previousCropLabel: "If you want to apply a new crop, which crop did you apply before?", soilTitle: "Soil Information", soilDesc: "Tell us about your soil.", soil1: "Sandy loam", soil2: "Clayey", soil3: "Black soil", soil4: "Alluvial", uploadLabel: "Upload photo of your soil (optional)", uploadDesc: "Click to upload soil photo", soilDescLabel: "Or describe your soil (optional)", weatherTitle: "Weather Information", weatherDesc: "What is the usual weather in your region?", weather1: "☀️ Hot & Dry", weather2: "💧 Humid", weather3: "🌧️ Rainy", weather4: "🌤️ Moderate", weather5: "❄️ Cold", appliedTitle: "Applied Crops", appliedDesc: "Have you already applied any crop recently?", appliedYes: "Yes", appliedNo: "No", appliedCropLabel: "Which crop did you apply?", congratsTitle: "Congratulations!", congratsDesc: "You've completed the FutureToFarm onboarding process", profileTitle: "Your Farming Profile", badgeText: "🏆 Farm Explorer Badge earned!", badgeDesc: "You've taken the first step towards smarter farming. Keep exploring!", btnDashboard: "Go to Dashboard" },
+      hi: { langTitle: "भाषा चयन", langDesc: "कृपया अपनी पसंदीदा भाषा चुनें।", langLabel: "भाषा चुनें", btnNext: "आगे", btnBack: "वापस", btnComplete: "पूरा करें", practiceTitle: "कृषि पद्धतियाँ", practiceDesc: "आप कौन सी कृषि पद्धतियाँ अपनाते हैं?", practice1: "🌿 जैविक", practice2: "🧪 रासायनिक आधारित", practice3: "🌾 मिश्रित फसल", practice4: "👩‍🌾 पारंपरिक", cropTitle: "फ़सल की जानकारी", currentCropLabel: "आप वर्तमान में कौन-सी फ़सल लगा रहे हैं या लगाना चाहते हैं?", previousCropLabel: "यदि आप नई फ़सल लगाना चाहते हैं, तो पहले कौन-सी फ़सल लगाई थी?", soilTitle: "मिट्टी की जानकारी", soilDesc: "हमें अपनी मिट्टी के बारे में बताएं।", soil1: "बालू जैसी मिट्टी", soil2: "चिकनी मिट्टी", soil3: "काली मिट्टी", soil4: "अवली मिट्टी", uploadLabel: "अपनी मिट्टी की फोटो अपलोड करें (वैकल्पिक)", uploadDesc: "फोटो अपलोड करने के लिए क्लिक करें", soilDescLabel: "या अपनी मिट्टी का वर्णन करें (वैकल्पिक)", weatherTitle: "मौसम की जानकारी", weatherDesc: "आपके क्षेत्र में सामान्य मौसम क्या है?", weather1: "☀️ गर्म और शुष्क", weather2: "💧 आर्द्र", weather3: "🌧️ वर्षा", weather4: "🌤️ मध्यम", weather5: "❄️ ठंडा", appliedTitle: "लागू फ़सलें", appliedDesc: "क्या आपने हाल ही में कोई फ़सल लगाई है?", appliedYes: "हाँ", appliedNo: "नहीं", appliedCropLabel: "आपने कौन-सी फ़सल लगाई?", congratsTitle: "बधाई हो!", congratsDesc: "आपने FutureToFarm ऑनबोर्डिंग पूरा कर लिया है", profileTitle: "आपकी कृषि प्रोफ़ाइल", badgeText: "🏆 फार्म एक्सप्लोरर बैज प्राप्त किया!", badgeDesc: "आपने स्मार्ट खेती की दिशा में पहला कदम उठाया है। आगे बढ़ते रहें!", btnDashboard: "डैशबोर्ड पर जाएं" },
+      mr: { langTitle: "भाषा निवड", langDesc: "कृपया आपली आवडती भाषा निवडा.", langLabel: "भाषा निवडा", btnNext: "पुढे", btnBack: "मागे", btnComplete: "पूर्ण करा", practiceTitle: "शेती पद्धती", practiceDesc: "तुम्ही कोणती शेती पद्धती वापरता?", practice1: "🌿 सेंद्रिय", practice2: "🧪 रासायनिक", practice3: "🌾 मिश्र पिके", practice4: "👩‍🌾 पारंपरिक", cropTitle: "पिकांची माहिती", currentCropLabel: "तुम्ही सध्या कोणते पीक लावत आहात किंवा लावू इच्छिता?", previousCropLabel: "जर तुम्ही नवीन पीक लावू इच्छित असाल तर आधी कोणते पीक लावले होते?", soilTitle: "मातीची माहिती", soilDesc: "तुमच्या मातीबद्दल सांगा.", soil1: "वाळूझाडसारखी माती", soil2: "कातडीदार माती", soil3: "काळी माती", soil4: "अवळी माती", uploadLabel: "मातीचा फोटो अपलोड करा (ऐच्छिक)", uploadDesc: "फोटो अपलोड करण्यासाठी क्लिक करा", soilDescLabel: "किंवा तुमची माती वर्णन करा (ऐच्छिक)", weatherTitle: "हवामान माहिती", weatherDesc: "तुमच्या भागात सामान्य हवामान काय आहे?", weather1: "☀️ गरम व कोरडे", weather2: "💧 दमट", weather3: "🌧️ पावसाळा", weather4: "🌤️ मध्यम", weather5: "❄️ थंड", appliedTitle: "लागत पिके", appliedDesc: "तुम्ही अलीकडे कोणतेही पीक लावले आहे का?", appliedYes: "हो", appliedNo: "नाही", appliedCropLabel: "तुम्ही कोणते पीक लावले?", congratsTitle: "अभिनंदन!", congratsDesc: "आपण FutureToFarm ऑनबोर्डिंग पूर्ण केले आहे", profileTitle: "आपली शेती प्रोफाइल", badgeText: "🏆 फार्म एक्सप्लोरर बॅज जिंकला!", badgeDesc: "आपण स्मार्ट शेतीकडे पहिले पाऊल उचलले आहे. पुढे जा!", btnDashboard: "डॅशबोर्ड वर जा" }
+    };
+
+    // Utility helpers (safe DOM updates)
+    function setText(id, text) { const el = document.getElementById(id); if (el) el.textContent = text; }
+    function setPlaceholder(id, text) { const el = document.getElementById(id); if (el) el.setAttribute && el.setAttribute('placeholder', text); }
+
+    // Safe class toggle helper
+    function safeToggleClass(el, action, className) {
+      if (!el || !el.classList) return;
+      if (action === 'add') el.classList.add(className);
+      else if (action === 'remove') el.classList.remove(className);
+      else if (action === 'toggle') el.classList.toggle(className);
+    }
+
+    function updateLanguage() {
+      const sel = document.getElementById('language');
+      const lang = sel ? sel.value : 'en';
+      const t = translations[lang] || translations['en'];
+
+      // Top level
+      setText('lang-title', t.langTitle);
+      setText('lang-desc', t.langDesc);
+      setText('lang-label', t.langLabel);
+      setText('btn-next-1', t.btnNext);
+
+      // Practices
+      setText('practice-title', t.practiceTitle);
+      setText('practice-desc', t.practiceDesc);
+      setText('practice1', t.practice1);
+      setText('practice2', t.practice2);
+      setText('practice3', t.practice3);
+      setText('practice4', t.practice4);
+      setText('btn-back-2', t.btnBack);
+      setText('btn-next-2', t.btnNext);
+
+      // Crop
+      setText('crop-title', t.cropTitle);
+      setText('current-crop-label', t.currentCropLabel);
+      setPlaceholder('current-crop', t.currentCropLabel || '');
+      setText('previous-crop-label', t.previousCropLabel);
+      setPlaceholder('previous-crop', t.previousCropLabel || '');
+      setText('btn-back-3', t.btnBack);
+      setText('btn-next-3', t.btnNext);
+
+      // Soil
+      setText('soil-title', t.soilTitle);
+      setText('soil-desc', t.soilDesc);
+      setText('soil1', t.soil1);
+      setText('soil2', t.soil2);
+      setText('soil3', t.soil3);
+      setText('soil4', t.soil4);
+      setText('upload-label', t.uploadLabel);
+      setText('upload-desc', t.uploadDesc);
+      setText('soil-desc-label', t.soilDescLabel);
+      setText('btn-back-4', t.btnBack);
+      setText('btn-next-4', t.btnNext);
+
+      // Weather
+      setText('weather-title', t.weatherTitle);
+      setText('weather-desc', t.weatherDesc);
+      setText('weather1', t.weather1);
+      setText('weather2', t.weather2);
+      setText('weather3', t.weather3);
+      setText('weather4', t.weather4);
+      setText('weather5', t.weather5);
+      setText('btn-back-5', t.btnBack);
+      setText('btn-next-5', t.btnNext);
+
+      // Applied
+      setText('applied-title', t.appliedTitle);
+      setText('applied-desc', t.appliedDesc);
+      setText('applied-yes', t.appliedYes);
+      setText('applied-no', t.appliedNo);
+      setText('applied-crop-label', t.appliedCropLabel);
+      setText('btn-back-6', t.btnBack);
+      setText('btn-complete', t.btnComplete);
+
+      // Summary & Badge
+      setText('congrats-title', t.congratsTitle);
+      setText('congrats-desc', t.congratsDesc);
+      setText('profile-title', t.profileTitle);
+      setText('badge-text', t.badgeText);
+      setText('badge-desc', t.badgeDesc);
+      setText('btn-dashboard', t.btnDashboard);
+    }
+
+    // Navigation functions with safety checks
+    function nextStep(current, next) {
+      const currentEl = document.getElementById(`step${current}`);
+      const nextEl = document.getElementById(`step${next}`);
+
+      // Safely hide current and show next (if present)
+      if (currentEl) safeToggleClass(currentEl, 'add', 'hidden');
+      else console.warn(`nextStep: current element step${current} not found`);
+
+      if (nextEl) safeToggleClass(nextEl, 'remove', 'hidden');
+      else console.warn(`nextStep: next element step${next} not found`);
+
+      // Update step counter safely
+      const counter = document.getElementById('step-counter');
+      if (counter) counter.textContent = `Step ${next} of 6`;
+
+      // Update progress indicators
+      const steps = Array.from(document.querySelectorAll('.progress-step'));
+      steps.forEach((step, index) => {
+        if (index < next - 1) { safeToggleClass(step, 'remove', 'active'); safeToggleClass(step, 'add', 'completed'); }
+        else if (index === next - 1) { safeToggleClass(step, 'add', 'active'); safeToggleClass(step, 'remove', 'completed'); }
+        else { safeToggleClass(step, 'remove', 'active'); safeToggleClass(step, 'remove', 'completed'); }
+      });
+    }
+
+    function prevStep(current, prev) {
+      const currentEl = document.getElementById(`step${current}`);
+      const prevEl = document.getElementById(`step${prev}`);
+
+      if (currentEl) safeToggleClass(currentEl, 'add', 'hidden');
+      else console.warn(`prevStep: current element step${current} not found`);
+
+      if (prevEl) safeToggleClass(prevEl, 'remove', 'hidden');
+      else console.warn(`prevStep: prev element step${prev} not found`);
+
+      const counter = document.getElementById('step-counter');
+      if (counter) counter.textContent = `Step ${prev} of 6`;
+
+      const steps = Array.from(document.querySelectorAll('.progress-step'));
+      steps.forEach((step, index) => {
+        if (index < prev - 1) { safeToggleClass(step, 'remove', 'active'); safeToggleClass(step, 'add', 'completed'); }
+        else if (index === prev - 1) { safeToggleClass(step, 'add', 'active'); safeToggleClass(step, 'remove', 'completed'); }
+        else { safeToggleClass(step, 'remove', 'active'); safeToggleClass(step, 'remove', 'completed'); }
+      });
+    }
+
+    function toggleAppliedCrop(show) {
+      const container = document.getElementById('applied-crop-container');
+      if (!container) return;
+      safeToggleClass(container, show ? 'remove' : 'add', 'hidden');
+    }
+
+    function showSummary() {
+      try {
+        const languageEl = document.getElementById('language');
+        const language = languageEl ? languageEl.options[languageEl.selectedIndex].text : 'English';
+
+        const practices = [];
+        document.querySelectorAll('input[name="practices"]:checked').forEach(cb => {
+          const label = cb.closest('label');
+          practices.push(label ? label.textContent.trim() : cb.value);
+        });
+
+        const currentCrop = (document.getElementById('current-crop') && document.getElementById('current-crop').value) || 'Not specified';
+        const previousCrop = (document.getElementById('previous-crop') && document.getElementById('previous-crop').value) || 'Not specified';
+
+        let soilEl = document.querySelector('input[name="soil"]:checked');
+        const soil = soilEl ? (soilEl.closest('label') ? soilEl.closest('label').textContent.trim() : soilEl.value) : 'Not specified';
+
+        let weatherEl = document.querySelector('input[name="weather"]:checked');
+        const weather = weatherEl ? (weatherEl.closest('label') ? weatherEl.closest('label').textContent.trim() : weatherEl.value) : 'Not specified';
+
+        let applied = 'None';
+        const appliedRadio = document.querySelector('input[name="applied"]:checked');
+        if (appliedRadio && appliedRadio.value === 'yes') applied = (document.getElementById('applied-crop') && document.getElementById('applied-crop').value) || 'Not specified';
+
+        setText('summary-language', language);
+        setText('summary-practices', practices.length ? practices.join(', ') : 'Not specified');
+        setText('summary-current-crop', currentCrop);
+        setText('summary-previous-crop', previousCrop);
+        setText('summary-soil', soil);
+        setText('summary-weather', weather);
+        setText('summary-applied', applied);
+
+        // Show summary and update progress
+        const step6 = document.getElementById('step6');
+        const summaryEl = document.getElementById('summary');
+        if (step6) safeToggleClass(step6, 'add', 'hidden');
+        if (summaryEl) safeToggleClass(summaryEl, 'remove', 'hidden');
+
+        document.querySelectorAll('.progress-step').forEach(s => { safeToggleClass(s, 'remove', 'active'); safeToggleClass(s, 'add', 'completed'); });
+        const counter = document.getElementById('step-counter'); if (counter) counter.textContent = 'Completed!';
+      } catch (err) {
+        console.error('Error in showSummary:', err);
+      }
+    }
+
+    // Initialize on DOMContentLoaded
+    document.addEventListener('DOMContentLoaded', () => {
+      try { if (typeof AOS !== 'undefined') AOS.init(); } catch (e) { /* ignore */ }
+      try { if (typeof feather !== 'undefined') feather.replace(); } catch (e) { /* ignore */ }
+
+      // Attach safe click handlers (avoid inline onclick execution issues)
+      const next1 = document.getElementById('btn-next-1-el'); if (next1) next1.addEventListener('click', () => nextStep(1, 2));
+      const next2 = document.getElementById('btn-next-2-el'); if (next2) next2.addEventListener('click', () => nextStep(2, 3));
+      const next3 = document.getElementById('btn-next-3-el'); if (next3) next3.addEventListener('click', () => nextStep(3, 4));
+      const next4 = document.getElementById('btn-next-4-el'); if (next4) next4.addEventListener('click', () => nextStep(4, 5));
+      const next5 = document.getElementById('btn-next-5-el'); if (next5) next5.addEventListener('click', () => nextStep(5, 6));
+
+      const back2 = document.getElementById('btn-back-2-el'); if (back2) back2.addEventListener('click', () => prevStep(2, 1));
+      const back3 = document.getElementById('btn-back-3-el'); if (back3) back3.addEventListener('click', () => prevStep(3, 2));
+      const back4 = document.getElementById('btn-back-4-el'); if (back4) back4.addEventListener('click', () => prevStep(4, 3));
+      const back5 = document.getElementById('btn-back-5-el'); if (back5) back5.addEventListener('click', () => prevStep(5, 4));
+      const back6 = document.getElementById('btn-back-6-el'); if (back6) back6.addEventListener('click', () => prevStep(6, 5));
+
+      const completeBtn = document.getElementById('btn-complete-el'); if (completeBtn) completeBtn.addEventListener('click', showSummary);
+      const dashboardBtn = document.getElementById('btn-dashboard-el'); if (dashboardBtn) dashboardBtn.addEventListener('click', () => { window.location.href = 'dashboard.html'; });
+
+      // Language select change
+      const langSel = document.getElementById('language'); if (langSel) { langSel.addEventListener('change', updateLanguage); }
+
+      // Apply initial language texts
+      updateLanguage();
+    });
+  </script>
+</body>
+</html>

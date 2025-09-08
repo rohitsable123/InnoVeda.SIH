@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutureToFarm - Gamified Sustainable Farming</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d',
+                        },
+                        secondary: {
+                            50: '#fafaf9',
+                            100: '#f5f5f4',
+                            200: '#e7e5e4',
+                            300: '#d6d3d1',
+                            400: '#a8a29e',
+                            500: '#78716c',
+                            600: '#57534e',
+                            700: '#44403c',
+                            800: '#292524',
+                            900: '#1c1917',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-bg {
+            background: radial-gradient(circle at 70% 50%, rgba(187, 247, 208, 0.2) 0%, rgba(255, 255, 255, 1) 60%);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <i data-feather="leaf" class="text-primary-600 h-6 w-6"></i>
+                        <span class="ml-2 text-xl font-bold text-primary-700">FutureToFarm</span>
+                    </div>
+                </div>
+                <div class="hidden md:ml-6 md:flex md:items-center md:space-x-8">
+                    <a href="#" class="text-primary-700 hover:text-primary-900 px-3 py-2 font-medium">Home</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-700 px-3 py-2 font-medium">Features</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-700 px-3 py-2 font-medium">About</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-700 px-3 py-2 font-medium">Contact</a>
+                    <a href="form.html" class="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500">Get Started</a>
+                </div>
+                <div class="-mr-2 flex items-center md:hidden">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500" aria-controls="mobile-menu" aria-expanded="false">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="md:w-1/2 mb-12 md:mb-0" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight text-gray-900 mb-6">
+                        Gamified Platform to Promote <span class="text-primary-600">Sustainable Farming</span> Practices
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-8">
+                        Educate and motivate farmers to adopt eco-friendly farming techniques through interactive challenges, personalized quests, progress tracking, and rewards.
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 mb-12">
+                        <a href="form.html" class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700">Get Started</a>
+                        <a href="#" class="inline-flex items-center justify-center px-6 py-3 border border-primary-600 text-base font-medium rounded-md text-primary-700 bg-white hover:bg-gray-50">Explore Features</a>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-primary-100 p-2 rounded-lg">
+                                <i data-feather="award" class="h-5 w-5 text-primary-600"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-900">Interactive Challenges</p>
+                                <p class="text-xs text-gray-500">Engage farmers with missions and tasks</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-primary-100 p-2 rounded-lg">
+                                <i data-feather="target" class="h-5 w-5 text-primary-600"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-900">Personalized Quests</p>
+                                <p class="text-xs text-gray-500">Tailored tasks based on your farm</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-primary-100 p-2 rounded-lg">
+                                <i data-feather="bar-chart-2" class="h-5 w-5 text-primary-600"></i>
+                            </div>
+                            <div class="ml-3">
+                                <p class="text-sm font-medium text-gray-900">Progress Tracker</p>
+                                <p class="text-xs text-gray-500">Dashboards, scores, and badges</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center" data-aos="fade-left">
+                    <img src="http://static.photos/agriculture/1024x576/1" alt="Farmer using tablet" class="rounded-lg shadow-xl w-full max-w-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">How It Works</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto">Transforming sustainable farming into an engaging experience</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition-all duration-300 ease-in-out" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-primary-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="play" class="h-6 w-6 text-primary-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Learning Through Play</h3>
+                    <p class="text-gray-600">Turn best practices into engaging missions that educate while entertaining.</p>
+                </div>
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition-all duration-300 ease-in-out" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-primary-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="users" class="h-6 w-6 text-primary-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Community & Leaderboards</h3>
+                    <p class="text-gray-600">Local recognition, peer sharing, and panchayat-level competition to motivate.</p>
+                </div>
+                <div class="feature-card bg-white p-8 rounded-xl shadow-md transition-all duration-300 ease-in-out" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-primary-100 w-12 h-12 rounded-lg flex items-center justify-center mb-6">
+                        <i data-feather="gift" class="h-6 w-6 text-primary-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">Incentives & Rewards</h3>
+                    <p class="text-gray-600">Earn real-world benefits like training credits and government scheme points.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-r from-primary-50 to-white rounded-2xl shadow-sm overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 p-8 md:p-12" data-aos="fade-right">
+                        <h2 class="text-3xl font-bold text-gray-900 mb-6">Expected Impact</h2>
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <i data-feather="check-circle" class="h-5 w-5 text-primary-600"></i>
+                                </div>
+                                <p class="ml-3 text-gray-700">Encourage widespread adoption of eco-friendly farming techniques</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <i data-feather="check-circle" class="h-5 w-5 text-primary-600"></i>
+                                </div>
+                                <p class="ml-3 text-gray-700">Build a connected community of farmers sharing best practices</p>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <i data-feather="check-circle" class="h-5 w-5 text-primary-600"></i>
+                                </div>
+                                <p class="ml-3 text-gray-700">Empower rural youth with gamified agricultural learning</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2 bg-primary-600 p-8 md:p-12 text-white" data-aos="fade-left">
+                        <div class="max-w-xs mx-auto">
+                            <div class="flex items-center mb-6">
+                                <i data-feather="shield" class="h-8 w-8 mr-3"></i>
+                                <span class="text-xl font-bold">Government of Kerala</span>
+                            </div>
+                            <p class="mb-6">Department of Agriculture Development & Farmers' Welfare</p>
+                            <p class="text-primary-100">Supported by the Ministry of Agriculture & Farmers Welfare, Government of India</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-primary-700 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-white mb-6" data-aos="fade-up">Ready to transform your farming experience?</h2>
+            <p class="text-primary-100 text-lg mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">Join thousands of farmers already improving their sustainability practices through gamification.</p>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <a href="form.html" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-primary-700 bg-white hover:bg-gray-50 md:py-4 md:text-lg md:px-10">Start Your Journey Today</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="md:flex md:items-center md:justify-between">
+                <div class="flex items-center">
+                    <i data-feather="leaf" class="h-6 w-6 text-primary-600"></i>
+                    <span class="ml-2 text-lg font-bold text-primary-700">FutureToFarm</span>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <p class="text-sm text-gray-500">© 2025 FutureToFarm • Built for SIH</p>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <p class="text-sm font-medium text-gray-900">Theme: Agriculture, FoodTech & Rural Development</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+    </script>
+</body>
+</html>
