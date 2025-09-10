@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+body {
+    font-family: 'Poppins', sans-serif;
+}
+.progress-ring__circle {
+    transition: stroke-dashoffset 1.5s ease-in-out;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+.badge-card:hover .badge-icon {
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+.mission-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
